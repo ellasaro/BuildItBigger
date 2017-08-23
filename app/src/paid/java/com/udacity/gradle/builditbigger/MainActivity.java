@@ -55,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
         spinner = (ProgressBar)findViewById(R.id.progressBar);
 
-        myJoker = new Joker();
-
         if (mIdlingResource != null) mIdlingResource.setIdleState(true);
     }
 
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             if(myApiService == null) {  // Only do this once
 
                 MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                        .setRootUrl("https://builditbigger-177522.appspot.com/_ah/api/");
+                        .setRootUrl("https://builditbigger-177522.appspot.com/_ah/api");
 
                 myApiService = builder.build();
             }
@@ -87,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
             //Make spinner invisible
             spinner.setVisibility(View.GONE);
             //Retrieve Joke and prepare intent
-            String myJoke = myJoker.tellJoke();
+            //String myJoke = myJoker.tellJoke();
             jokeIntent = new Intent(getBaseContext(), DisplayJokeActivity.class);
-            jokeIntent.putExtra(JOKE_KEY, myJoke);
+            jokeIntent.putExtra(JOKE_KEY, result);
             //Set idling resource true
             if (mIdlingResource != null) mIdlingResource.setIdleState(true);
 

@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
-        myJoker = new Joker();
-
         if (mIdlingResource != null) mIdlingResource.setIdleState(true);
     }
 
@@ -105,10 +103,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             //Make spinner invisible
             spinner.setVisibility(View.GONE);
-            //Retrieve Joke and prepare intent
-            String myJoke = myJoker.tellJoke();
             jokeIntent = new Intent(getBaseContext(), DisplayJokeActivity.class);
-            jokeIntent.putExtra(JOKE_KEY, myJoke);
+            jokeIntent.putExtra(JOKE_KEY, result);
             //Set idling resource true
             if (mIdlingResource != null) mIdlingResource.setIdleState(true);
 
