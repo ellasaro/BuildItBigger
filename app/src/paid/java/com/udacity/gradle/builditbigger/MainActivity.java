@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import com.example.Joker;
 import com.blackfrogweb.androidlibrary.DisplayJokeActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -30,7 +29,6 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Joker myJoker;
     public static String JOKE_KEY = "joke";
     private Intent jokeIntent;
     private ProgressBar spinner;

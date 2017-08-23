@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import com.example.Joker;
 import com.blackfrogweb.androidlibrary.DisplayJokeActivity;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -33,7 +32,6 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Joker myJoker;
     public static String JOKE_KEY = "joke";
     private InterstitialAd mInterstitialAd;
     private Intent jokeIntent;
