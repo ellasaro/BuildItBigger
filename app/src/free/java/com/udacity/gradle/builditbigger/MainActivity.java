@@ -123,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
         //Make spinner visible
         spinner.setVisibility(View.VISIBLE);
         new EndpointsAsyncTask().execute();
-        //Toast.makeText(this, myJoke, Toast.LENGTH_SHORT).show();
     }
 
     public void startJokeActivity(){
