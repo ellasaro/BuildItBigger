@@ -32,7 +32,7 @@ task TestTask {
     }
     dependsOn ':backend:appengineRun'
     //run connected tests
-    tasks.getByPath('app:connectedAndroidTest')
+    tasks.getByPath(':app:connectedAndroidTest')
     //shut down server
     finalizedBy ":backend:appengineStop"
 }
